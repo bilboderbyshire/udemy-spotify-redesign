@@ -19,9 +19,12 @@ const scope =
 const state = generateRandomString(16);
 const challenge = pkce.create()
 
-export const GET: RequestHandler = () => {
-    throw redirect(307, `https://accounts.spotify.com/authorize?${
-        new URLSearchParams({
+export const GET: RequestHandler = ({cookies}) => {
+    cookies.set("spotify_auth_state", state)
+    cookies.set("spotify_auth_challenge_verifier", challenge.code_verifier)
+    throw redirect(
+        307, 
+        `https://accounts.spotify.com/authorize?${new URLSearchParams({
             response_type: "code",
             client_id: SPOTIFY_APP_CLIENT_ID,
             scope,
@@ -31,5 +34,5 @@ export const GET: RequestHandler = () => {
             code_challenge: challenge.code_challenge
 
         })
-    }`)
+    }`);
 };
