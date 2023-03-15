@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { LogoutButton } from "$components";
+	import { LogoutButton, Navigation } from "$components";
     import 'modern-normalize/modern-normalize.css';
     import '../styles/main.scss';
 	import type { LayoutData } from './$types';
@@ -13,6 +13,13 @@
 </script>
 
 <div id="main">
+    {#if user}
+        <div id="sidebar">
+            <!-- When this component recieves true it will change the sidebar to appear all the time. When it is
+                 false, the sidebar will appear when a button is pressed-->
+            <Navigation desktop={true}/>
+        </div>
+    {/if}
     <div id="content">
         <main id="main-content">
             <slot/>
@@ -22,7 +29,10 @@
 
 <style lang="scss">
     #main {
+        display: flex;
+
         #content {
+            flex: 1;
             main#main-content {
                 padding: 30px 15px 60px;
                 @include breakpoint.up("md") {

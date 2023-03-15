@@ -41,7 +41,7 @@
 
         &.button-solid {
             background-color: var(--accent-color);
-            color: var(--text-color);
+            color: var(--light-text-color);
             border: 2px solid var(--accent-color);
         }
 
@@ -65,21 +65,21 @@
         &:hover {
             &.button-solid, 
             &.button-danger {
-                background-image: linear-gradient(rgba(0,0,0,0.1) 0 0);
+                background-image: linear-gradient(rgba(180,180,180,0.1) 0 0);
             }
 
             &.button-outline {
-                background-image: linear-gradient(rgba(255,255,255,0.1) 0 0);
+                background-image: linear-gradient(rgba(0,0,0,0.1) 0 0);
             }
         }
 
         &:active {
             &.button-solid,
             &.button-danger {
-                background-image: linear-gradient(rgba(255,255,255,0.1) 0 0);
+                background-image: linear-gradient(rgba(0,0,0,0.1) 0 0);
             }
             &.button-outline {
-                background-image: linear-gradient(rgba(255,255,255,0.3) 0 0);
+                background-image: linear-gradient(rgba(0,0,0,0.3) 0 0);
             }
         }
 

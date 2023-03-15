@@ -58,6 +58,7 @@
 
         img {
             width: 100%;
+            box-shadow: 15px 17px 39px -9px rgba(0,0,0,0.75);
         }
     }
 
