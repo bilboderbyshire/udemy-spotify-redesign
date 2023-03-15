@@ -1,5 +1,7 @@
 @use 'sass:math';
 
+// This function sets a given font point value into it's equivalent rem value,
+ // Check this link for rem explanation: https://www.sitepoint.com/understanding-and-using-rem-units-in-css/
 @function toRem($value) {
     @return #{math.div($value, 16)}rem;
 }

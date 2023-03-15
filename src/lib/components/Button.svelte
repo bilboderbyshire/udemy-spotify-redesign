@@ -1,5 +1,25 @@
 <script lang="ts">
-    export let element: "button" | "a";
+    import type { HTMLAnchorAttributes, HTMLButtonAttributes } from "svelte/elements";
+
+    // Sets the type of this element to either be a button or an anchor tag
+    type Element = $$Generic<"button" | "a">;
+
+    // A storage interface that stores the acceptable attributes (as imported and specified above)
+     // for each of the possible element types this component can act as
+    interface ButtonComponentElements {
+        button : HTMLButtonAttributes;
+        a : HTMLAnchorAttributes;
+    }
+
+    // Sets up the possible props that can be passed to this component on import. The type of props is adjusted
+     // by the interface by passing in the key that is dynamically set by the exported element variable.
+    type $$Props = ButtonComponentElements[Element] & {
+        element: Element
+        variant?: "solid" | "outline" | "danger";
+        className?: string;
+    };
+
+    export let element: Element;
     export let variant: "solid" | "outline" | "danger" = "solid";
     export let className: string = "";
 </script>
@@ -21,7 +41,7 @@
 
         &.button-solid {
             background-color: var(--accent-color);
-            color: #000;
+            color: var(--text-color);
             border: 2px solid var(--accent-color);
         }
 
