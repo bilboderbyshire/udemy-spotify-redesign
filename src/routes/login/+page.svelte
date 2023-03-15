@@ -1,6 +1,9 @@
 <script>
-    import { Skull} from "lucide-svelte";
+    import { Button } from "$components";
 
 </script>
-<Skull />
-<a href="/api/auth/login">Login</a>
+
+<div style="margin:10px">
+    <Button element="a" href="dw" variant="outline">Login</Button>
+    <Button element="button" variant="danger">Button</Button>
+</div>
