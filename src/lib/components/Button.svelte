@@ -41,7 +41,7 @@
 
         &.button-solid {
             background-color: var(--accent-color);
-            color: #000;
+            color: var(--text-color);
             border: 2px solid var(--accent-color);
         }
 
