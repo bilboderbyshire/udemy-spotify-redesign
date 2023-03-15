@@ -2,6 +2,7 @@
 <html lang="en" class="no-js">
 	<head>
 		<script>
+			// This function will change the class of our html file depending on whether javascript is enabled or not.
 			(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)
 		</script>
 		<meta charset="utf-8" />
@@ -9,6 +10,7 @@
 		<meta name="viewport" content="width=device-width" />
 		%sveltekit.head%
 	</head>
+	<!-- This preload data attribute will preload a pages content if the element that links to said page is hovered over -->
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>

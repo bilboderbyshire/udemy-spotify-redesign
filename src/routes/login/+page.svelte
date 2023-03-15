@@ -4,6 +4,6 @@
 </script>
 
 <div style="margin:10px">
-    <Button element="a" href="dw" variant="outline">Login</Button>
+    <Button element="a" href="/api/auth/login" variant="outline">Login</Button>
     <Button element="button" variant="danger">Button</Button>
 </div>
