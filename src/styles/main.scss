@@ -20,7 +20,7 @@
 	--medium-gray: #2e2e2e;
 	--dark-gray: #181818;
 	--menu-text-color: #fff;
-	--border: rgba(255, 255, 255, 0.15);
+	--border: rgba(203, 175, 232, 0.4);
 	--sidebar-width: 250px;
 	--header-height: 64px;
 	--error: #c24141;
@@ -28,14 +28,14 @@
 }
 
 body {
-    font-family: "Metropolis", "Segoe UI", sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color)   
+	font-family: 'Metropolis', 'Segoe UI', sans-serif;
+	background-color: var(--bg-color);
+	color: var(--text-color);
 }
 
 ::selection {
-    background-color: var(--accent-color);
-    color: var(--text-color);
+	background-color: var(--accent-color);
+	color: var(--text-color);
 }
 
 h1,
@@ -44,10 +44,10 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 700;
-    line-height: 1.4;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+	font-weight: 700;
+	line-height: 1.4;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 }
 
 h1 {

@@ -44,8 +44,8 @@
 			cursor: not-allowed;
 		}
 
-		&:active {
-			background-image: linear-gradient(rgba(100, 100, 100, 0.2) 0 0);
+		&:hover {
+			background-image: linear-gradient(rgba(200, 200, 200, 0.3) 0 0);
 		}
 	}
 </style>
