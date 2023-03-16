@@ -144,7 +144,6 @@
 					</li>
 				{/each}
 			</ul>
-			{desktop}
 		</div>
 	</nav>
 </div>
@@ -252,7 +251,7 @@
 		}
 
 		:global(.menu-button) {
-			background-color: var(--sidebar-color);
+			background-color: var(--accent-button-trans);
 			@include breakpoint.up('md') {
 				display: none;
 			}
