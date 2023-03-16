@@ -1,10 +1,11 @@
 <script lang="ts">
     import { tick, type ComponentType } from "svelte";
-    import { Home, Search, ListMusic, type Icon } from "lucide-svelte";
+    import { Home, Search, ListMusic, type Icon, Menu } from "lucide-svelte";
     import logo from "$assets/spotify_logo_full_white.png";
 	import { page } from "$app/stores";
 	import { fade } from "svelte/transition";
 	import { beforeNavigate } from "$app/navigation";
+    import { IconButton } from "$components";
 
     export let desktop: boolean = true;
 
@@ -89,6 +90,7 @@
     {/if}
     <nav aria-label="Main">
         {#if !desktop}
+            <IconButton icon={Menu} label="Open menu"/>
             <button bind:this={openMenuButton} on:click={openMenu} aria-expanded={isOpen}>Open</button>
         {/if}
         <div 
@@ -123,7 +125,7 @@
                     </li>
                 {/each}
             </ul>
-            {isOpen}
+            {desktop}
         </div>
     </nav>
 </div>
