@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { LogoutButton, Navigation } from "$components";
+	import { Navigation, Header } from "$components";
     import 'modern-normalize/modern-normalize.css';
     import '../styles/main.scss';
 	import type { LayoutData } from './$types';
@@ -33,7 +33,7 @@
         {#if user}
             <div id="topbar" bind:this={topbar}>
                 <div class="topbar-bg" style:background-color="var(--header-color)" style:opacity={headerOpacity}/>
-                topbar
+                <Header/>
             </div>
         {/if}
         <main id="main-content" class:logged-in={user}>
