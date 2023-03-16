@@ -24,7 +24,7 @@
 
 <style lang="scss">
     :global(body) {
-        background-image: linear-gradient(40deg, var(--sidebar-color), var(--bg-color));
+        background-image: linear-gradient(355deg, var(--accent-color), var(--secondary-color), var(--faux-white));
         height: 100vh;
         min-width: 300px;
 
