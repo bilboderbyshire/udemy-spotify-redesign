@@ -96,6 +96,7 @@
 		{#if !desktop}
 			<IconButton
 				icon={Menu}
+				iconColor="--faux-white"
 				label="Open menu"
 				bind:this={openMenuButton}
 				on:click={openMenu}
@@ -251,6 +252,7 @@
 		}
 
 		:global(.menu-button) {
+			background-color: var(--sidebar-color);
 			@include breakpoint.up('md') {
 				display: none;
 			}
