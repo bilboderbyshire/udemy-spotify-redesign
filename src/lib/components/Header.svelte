@@ -45,7 +45,7 @@
 					<li>
 						<a href={user?.external_urls.spotify} target="_blank" rel="noopener norefferer"
 							>View on Spotify
-							<ExternalLink focusable="false" aria-hidden="true" size={12}/>
+							<ExternalLink focusable="false" aria-hidden="true" size={12} />
 						</a>
 					</li>
 					<li>
@@ -103,8 +103,7 @@
 			list-style: none;
 
 			li {
-
-				a :global(svg){
+				a :global(svg) {
 					vertical-align: middle;
 					margin-left: 5px;
 					margin-bottom: 5px;
@@ -122,14 +121,17 @@
 					width: 100%;
 					text-align: left;
 					font-size: functions.toRem(15);
+
+					&:focus-visible {
+						outline: 2px solid var(--accent-color);
+						outline-offset: 2px;
+					}
 				}
 
 				&:hover {
 					background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
 				}
-
 			}
 		}
 	}
-	
 </style>
