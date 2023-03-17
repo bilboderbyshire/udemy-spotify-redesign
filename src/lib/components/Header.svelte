@@ -20,6 +20,8 @@
 					content: document.getElementById('profile-menu') || undefined,
 					trigger: 'click',
 					placement: 'bottom-end',
+					theme: 'menu',
+					arrow: false,
 					interactive: true,
 					onMount: () => {
 						const template = document.getElementById('profile-menu');
@@ -38,20 +40,22 @@
 			</button>
 		</div>
 		<div id="profile-menu" style="display: none;">
-			<ul>
-				<li>
-					<a href={user?.external_urls.spotify} target="_blank" rel="noopener norefferer"
-						>View on Spotify
-						<ExternalLink focusable="false" aria-hidden="true" />
-					</a>
-				</li>
-				<li>
-					<a href="/profile">View Profile</a>
-				</li>
-				<li>
-					<LogoutButton />
-				</li>
-			</ul>
+			<div class="profile-menu-content">
+				<ul>
+					<li>
+						<a href={user?.external_urls.spotify} target="_blank" rel="noopener norefferer"
+							>View on Spotify
+							<ExternalLink focusable="false" aria-hidden="true" size={12}/>
+						</a>
+					</li>
+					<li>
+						<a href="/profile">View Profile</a>
+					</li>
+					<li>
+						<LogoutButton />
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>
@@ -90,4 +94,42 @@
 			background-image: linear-gradient(rgba(200, 200, 200, 0.3) 0 0);
 		}
 	}
+
+	.profile-menu-content {
+		padding: 5px 0;
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+
+			li {
+
+				a :global(svg){
+					vertical-align: middle;
+					margin-left: 5px;
+					margin-bottom: 5px;
+				}
+
+				a,
+				:global(button) {
+					display: inline-block;
+					padding: 10px 15px;
+					text-decoration: none;
+					cursor: pointer;
+					border: none;
+					color: var(--text-color);
+					background: none;
+					width: 100%;
+					text-align: left;
+					font-size: functions.toRem(15);
+				}
+
+				&:hover {
+					background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0 0);
+				}
+
+			}
+		}
+	}
+	
 </style>

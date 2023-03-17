@@ -5,12 +5,13 @@
 @import '@fontsource/metropolis/500';
 @import '@fontsource/metropolis/600';
 @import '@fontsource/metropolis/700';
+@import 'tippy-theme';
 
 :root {
 	--bg-color: #efefef;
 	--secondary-color: #cbafe8;
-	--sidebar-color: #8930e8;
-	--header-color: #8930e8;
+	--sidebar-color: #7f3fc4;
+	--header-color: #7f3fc4;
 	--faux-white: #efefef;
 	--light-text-color: #efefef;
 	--text-color: #3f3f3f;
@@ -23,7 +24,7 @@
 	--border: rgba(203, 175, 232, 0.4);
 	--sidebar-width: 250px;
 	--header-height: 64px;
-	--accent-button-trans: #8930e8a7;
+	--accent-button-trans: #7f3fc4a7;
 	--error: #c24141;
 	--warning: #e7a917;
 }
