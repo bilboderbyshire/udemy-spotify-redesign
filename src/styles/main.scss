@@ -101,3 +101,7 @@ a {
 	white-space: nowrap;
 	width: 1px;
 }
+
+#nprogress .bar {
+	background-color: var(--accent-color);
+}

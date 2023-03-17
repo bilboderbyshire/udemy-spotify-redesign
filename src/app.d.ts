@@ -10,6 +10,7 @@ declare global {
 		 // SpotifyApi.CurrentUsersProfileResponse, but we can set up our own by nesting another object inside
 		interface PageData {
 			user: SpotifyApi.CurrentUsersProfileResponse | null;
+			title?: string;
 		}
 		// interface Platform {}
 	}
